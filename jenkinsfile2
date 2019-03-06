@@ -1,0 +1,11 @@
+node{
+stage('scm package'){
+https://github.com/mano8888/bottole.git
+}
+stage('mvn package'){
+sh 'mvn clean package'
+}
+stage('build docker image'){
+sh 'sudo docker build -t mano8888/dbs .'
+}
+}
