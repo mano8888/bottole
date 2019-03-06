@@ -6,6 +6,6 @@ stage('mvn package'){
 sh 'mvn clean package'
 }
 stage('build docker image'){
-sh 'sudo docker build -t mano8888/dbs .'
+sh 'docker build -t mano8888/dbs .'
 }
 }
