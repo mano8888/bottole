@@ -1,0 +1,11 @@
+node{
+stage('scm package'){
+git credentials:- https://github.com/mano8888/jug.git
+}
+stage('mvn package'){
+sh 'mvn clean package'
+}
+stage('build docker image'){
+sh 'sudo docker build -t nageshvkn/node3 .'
+}
+}
