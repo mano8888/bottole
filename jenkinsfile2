@@ -1,6 +1,6 @@
 node{
 stage('scm package'){
-https://github.com/mano8888/bottole.git
+git credentialsId: 'git-credits', url: 'https://github.com/mano8888/bottole.git'
 }
 stage('mvn package'){
 sh 'mvn clean package'
